@@ -42,9 +42,9 @@ jobs:
     # Build the Docker image
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.ANZ_ACR_INSTANCE_NAME }}.azurecr.io/${{ secrets.ACR_IMAGE_NAME }}:latest .
+        docker build -t ${{ secrets.ANZ_ACR_INSTANCE_NAME }}.azurecr.io/${{ secrets.ACR_IMAGE_NAME }}:${{ github.sha }} .
 
     # Push the Docker image to ACR
     - name: Push Docker image to ACR
       run: |
-        docker push ${{ secrets.ANZ_ACR_INSTANCE_NAME }}.azurecr.io/${{ secrets.ACR_IMAGE_NAME }}:latest
+        docker push ${{ secrets.ANZ_ACR_INSTANCE_NAME }}.azurecr.io/${{ secrets.ACR_IMAGE_NAME }}:${{ github.sha }}
