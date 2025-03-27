@@ -30,11 +30,11 @@
     align-items: center; /* Center content horizontally */
     min-width: 320px;
     min-height: 100vh;
-    /*color: white;
+    color: white;
     background-image: url('/heart.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;*/
+    background-size: contain;
   }
   
   h1 {
